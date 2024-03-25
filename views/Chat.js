@@ -244,7 +244,7 @@ export default function Chat({navigation}) {
 const styles = StyleSheet.create({
     texts: {
         color:'white',
-        fontSize:12
+        fontSize:13
     },
     swipeText:{
       color:'white',
