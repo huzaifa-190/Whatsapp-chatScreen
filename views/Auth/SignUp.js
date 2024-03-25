@@ -26,6 +26,8 @@ export default function SignUp({navigation}) {
     validateForm(); 
 }, [email,password,confirmPassword]);
 
+
+// Form validation
 const validateForm = () => { 
  
   let errors = {}; 
@@ -52,9 +54,6 @@ const validateForm = () => {
 }; 
 
 
-
-
-
   //  On press of create account button
   const onCreateAccount = async ()=>{
     if(isFormValid){
@@ -78,7 +77,7 @@ const validateForm = () => {
   }
 }
 
-// 
+// already have an account --> pressing login
   const onLogIn = () => {
     navigation.navigate('Login');
   }

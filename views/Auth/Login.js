@@ -15,7 +15,7 @@ export default function Login({navigation,route}) {
 
   // Onpress of login button 
   const onLogIn = async ()=>{
-    // await signInWithEmailAndPassword(auth, 'huzaifabasharat@gmail.com', '123456hh')
+    
     await signInWithEmailAndPassword(auth, userName, userPassword)
    .then((userCredential) => {
      // Signed in

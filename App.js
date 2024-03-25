@@ -60,8 +60,7 @@ export default function App()  {
     <NavigationContainer>
        <Stack.Navigator screenOptions={{ headerShown: true }}>
           
-          {/* <Stack.Screen name="Practice" component={Practice}  options={{headerShown:true}}/> */}
-          {/* <Stack.Screen name="Pr2" component={Pr2}  options={{headerShown:true}}/> */}
+         
 
           {/* <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
           <Stack.Screen name="SignUp" component={SignUp} />  */}
@@ -78,8 +77,6 @@ export default function App()  {
                                                              // headerBackTitle: "Back",
                                                              }}/>
           <Stack.Screen name="Inbox" component={Inbox}  options={{headerShown:true}}/>
-
-          {/* <Stack.Screen name="Home" component={Home} options={{headerShown:false}} /> */}
 
       </Stack.Navigator>
     </NavigationContainer>
