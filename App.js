@@ -14,8 +14,6 @@ import { StyleSheet, View ,Text,TouchableOpacity} from "react-native";
 
 // ************************************* Importing own components 
 // import Home from "./views/Home"
-import Login from "./views/Auth/Login"
-import SignUp from "./views/Auth/SignUp"
 import Chat from "./views/Chat"
 // import Practice from "./views/Practice"
 // import Pr2 from "./views/Pr2"
@@ -62,8 +60,6 @@ export default function App()  {
           
          
 
-          {/* <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
-          <Stack.Screen name="SignUp" component={SignUp} />  */}
 
           <Stack.Screen name="Chat" component={Chat } options={{headerShown:true,
                                                               

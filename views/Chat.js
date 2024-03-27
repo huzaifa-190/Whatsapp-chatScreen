@@ -21,56 +21,39 @@ import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity, SectionList,Fl
 
 export default function Chat({navigation}) {
   
-  
+ 
   // ****************************************************** DECLARATIONS ********************************
-  // const msgs=[{msg:'Hi',time:'4:32 PM'},{msg:'See you',time:'5:01'}]
-  const msgs = [[{msg:'Hello how ar you', time:'11:00 PM'},{msg:' Huzaifa here',time:'11:07 PM'}],
-                [{msg:'Are you free ?', time:'6:20 PM'},{msg:'I need to talk to you', time:'6:22 PM'}],
-                [{msg:'That was a pleasent experience', time:'1:22 AM'},{msg:'I need to talk to you', time:'2:09 PM'}],
-                [{msg:'wow Fantastic !', time:'1:22 AM'}],
-                [{msg:'Met an accident ', time:'5:42 PM'},{msg:'😥😥',time:'5:43 PM'}],
-                [{msg:'Aja coach snooker chlein', time:'1:22 PM'},],
-                [{msg:'Okay ! see you then', time:'4:54 AM'},],
-                [{msg:'Ywr suni , yeh btai kesay krna', time:'1:22 AM'},],
-                [{msg:'Chloe theek hai , kl kr lein gey', time:'3:12 AM'},{msg:'Listen', time:'5:02 AM'}],
-                [{msg:'Kahan ho', time:'11:02 PM'},],
-                [{msg:'AoA', time:'11:02 PM'},],
+
+  const msgs = [[{key:0,msg:'Hello how ar you', time:'11:00 PM'},{key:1,msg:' Huzaifa here',time:'11:07 PM'}],
+                [{key:0,msg:'Are you free ?', time:'6:20 PM'},{key:1,msg:'I need to talk to you', time:'6:22 PM'}],
+                [{key:0,msg:'kahan ho', time:'11:02 PM'},],
+                [{key:0,msg:'Met an accident ', time:'5:42 PM'},{key:1,msg:'😥😥',time:'5:43 PM'}],
+                [],
+                [{key:0,msg:'Aja coach snooker chlein', time:'1:22 PM'},],
+                [{key:0,msg:'Okay ! see you then', time:'4:54 AM'},],
+                [],
+                [{key:0,msg:'Chloe theek hai , kl kr lein gey', time:'3:12 AM'},{key:1,msg:'Listen', time:'5:02 AM'}],
+                [{key:0,msg:'Hey', time:'11:02 PM'},],
+                [{key:0,msg:'That was a pleasent experience', time:'1:22 AM'},{key:1,msg:'I need to talk to you', time:'2:09 PM'}],
+                [{key:0,msg:'AoA', time:'11:02 PM'},],
 
 ];
 
   const [data, setData] = useState([
-    {key:0, title:'Huzaifa', msg:msgs[0], unread:'4' ,src: require("../assets/users/i1.jpg")},
-    {key:1, title:'Ali Hamza',msg:msgs[1], unread:'2',src: require("../assets/users/i2.jpg")},
-    {key:3, title:'Taha Ali', msg:msgs[2], unread:'6',src: require("../assets/users/dummy.jpg")},
-    {key:4, title:'Hunain', msg:msgs[3], unread:'2',src: require("../assets/users/i1.jpg")},
-    {key:5, title:'Faizan', msg:msgs[4], unread:'2',src: require("../assets/users/faizan.png")},
-    {key:6, title:'Abdullah', msg:msgs[5],  unread:'4',src: require("../assets/users/i2.jpg")},
-    {key:7, title:'Ahmed virk', msg:msgs[6], unread:'1',src: require("../assets/users/dummy.jpg")},
-    {key:8, title:'Hafiz Umair', msg:msgs[7], unread:'4',src: require("../assets/users/dummy.jpg")},
-    {key:9, title:'Kabir', msg:msgs[8], unread:'3',src: require("../assets/users/i1.jpg")},
-    {key:10, title:'Huzaifa', msg:msgs[0], unread:'4' ,src: require("../assets/users/i1.jpg")},
-    {key:11, title:'Marleen', msg:msgs[9], unread:'1',src: require("../assets/users/dummy.jpg")},
-    {key:12, title:'Hassan ❤️❤️❤️', msg:msgs[10], unread:'7',src: require("../assets/users/i2.jpg")},
+    {key:0, title:'Huzaifa', msg:msgs[0], unread:msgs[0].length ,src: require("../assets/users/i1.jpg")},
+    {key:1, title:'Ali Hamza',msg:msgs[1], unread:msgs[1].length,src: require("../assets/users/i2.jpg")},
+    {key:2, title:'Taha Ali', msg:msgs[2], unread:msgs[2].length,src: require("../assets/users/dummy.jpg")},
+    {key:3, title:'Hunain', msg:msgs[3], unread:msgs[3].length,src: require("../assets/users/i1.jpg")},
+    {key:4, title:'Faizan', msg:msgs[4], unread:msgs[4].length,src: require("../assets/users/faizan.png")},
+    {key:5, title:'Abdullah', msg:msgs[5],  unread:msgs[5].length,src: require("../assets/users/i2.jpg")},
+    {key:6, title:'Ahmed virk', msg:msgs[6], unread:msgs[6].length,src: require("../assets/users/dummy.jpg")},
+    {key:7, title:'Hafiz Umair', msg:msgs[7], unread:msgs[7].length,src: require("../assets/users/dummy.jpg")},
+    {key:8, title:'Kabir', msg:msgs[8], unread:msgs[8].length,src: require("../assets/users/i1.jpg")},
+    {key:9, title:'Huzaifa', msg:msgs[9], unread:msgs[9].length ,src: require("../assets/users/i1.jpg")},
+    {key:10, title:'Marleen', msg:msgs[10], unread:msgs[10].length,src: require("../assets/users/dummy.jpg")},
+    {key:11, title:'Hassan ❤️❤️❤️', msg:msgs[11],unread: msgs[11].length,src: require("../assets/users/i2.jpg")},
   ]);
 
-  const DATA = [
-    {
-      title: 'Main dishes',
-      data: ['Pizza', 'Burger', 'Risotto'],
-    },
-    {
-      title: 'Sides',
-      data: ['French Fries', 'Onion Rings', 'Fried Shrimps'],
-    },
-    {
-      title: 'Drinks',
-      data: ['Water', 'Coke', 'Beer'],
-    },
-    {
-      title: 'Desserts',
-      data: ['Cheese Cake', 'Ice Cream'],
-    },
-  ];
   // *********************************************************FUNCTIONS***********************************************
 
 
@@ -147,6 +130,7 @@ export default function Chat({navigation}) {
 
   }
 
+  
 
   //-------------------------------------------------------------- Return   -------------------------------------------------------------------------
   return(
@@ -210,17 +194,22 @@ export default function Chat({navigation}) {
         <View style={styles.middle}>
 
         <Text style={{color:'black' , fontWeight:'500' , fontSize:15}}> {item.title} </Text>
-        <Text style={{color:'grey', fontSize:14}}> {item.msg[0].msg} </Text>
+
+        {item.msg[0] ? 
+        <Text style={{color:'grey', fontSize:14}}>{item.msg[0].msg} </Text>
+        : null} 
 
         </View>
         
         <View style={styles.right}>
-
-        <Text style={{color:'grey',fontSize:12}}> {item.msg[0].time} </Text>
-            <View style={styles.unread}>
-
-        <Text style={[styles.texts ] }> {item.unread} </Text>
-          </View>
+        {item.msg[0] ?  
+        <Text style={{color:'grey',fontSize:12}}> { item.msg[msgs[item.key].length-1].time} </Text>
+        : null}
+        
+        
+          {item.unread > 0 ? <View style={styles.unread}>
+            <Text style={[styles.texts ] }> {item.unread} </Text> 
+            </View> : null }
       
         </View>
       
@@ -293,7 +282,8 @@ const styles = StyleSheet.create({
       justifyContent:'center', 
       backgroundColor:'	rgb(37, 211, 102)',
       // backgroundColor:'orange',
-      borderRadius:50
+      borderRadius:50,
+      
       
     },
    
